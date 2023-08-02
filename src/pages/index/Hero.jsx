@@ -1,10 +1,21 @@
+import { Link } from 'react-router-dom'
 import './hero.css'
 
 export default function Hero() {
     return (
-        <>
-            <h2>Hero</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis pariatur, iste deserunt error fuga quod fugit obcaecati eaque, id aut voluptas numquam labore totam. Deleniti distinctio atque eos accusamus quidem impedit veritatis obcaecati nemo ipsum dolorem laborum quam beatae vitae at harum autem fugiat recusandae facilis, ullam commodi consequuntur veniam. Magni tempora consequatur, porro harum illo dolores blanditiis mollitia aspernatur unde! Eos unde porro illum voluptate maiores officiis fuga vel amet eius reiciendis repellat ipsam nemo aspernatur natus nulla eveniet, ut, facilis doloremque hic maxime? Nemo quae velit distinctio nam itaque debitis ad fuga porro, ducimus saepe! Quam exercitationem in unde mollitia perspiciatis atque iusto tempora explicabo aperiam deleniti dolorem qui quaerat totam, aut repellendus autem at similique, incidunt cupiditate quas molestias odit. Minus voluptatibus corrupti molestiae fugit placeat iure sunt, aliquid incidunt, voluptate tempore vero voluptates consequuntur deserunt voluptas? Quaerat nostrum laudantium, quam quia reiciendis hic voluptas a autem blanditiis molestias quisquam? Quo, labore. Explicabo cupiditate atque hic cum autem ipsum beatae velit consectetur, culpa sit. Sunt laudantium ullam facere cumque maiores soluta magni sit, ut quasi labore sint saepe delectus nam? Ab aspernatur blanditiis tempora asperiores repudiandae a ullam, iure at culpa exercitationem reiciendis nam hic perspiciatis consequatur.</p>
-        </>
+        <main className='hero min-h-screen bg-hero-background'>
+            <div className="card lg:card-side h-3/6  backdrop-blur-sm shadow-xl sm:flex-row p-4 bg-slate-950 bg-opacity-50">
+                <figure><img src="https://w0.peakpx.com/wallpaper/879/731/HD-wallpaper-cat-abej-beach-beograd-drink-summer-vacation-zedgeld17.jpg" alt="decoration" className='w-72 rounded-xl' /></figure>
+                <div className="flex flex-col items-center h-full justify-center font-bold text-slate-300 gap-5 text-center">
+                    <h2 className="w-3/5 text-xl">Find your perfect trip designed by insiders who know and love their cities</h2>
+                    <div className="flex items-center gap-5 justify-end">
+                        <p className='text-2xl text-white'>Go to find your destination!</p>
+                        <Link >
+                            <img src="/myIco1.png" alt="animated button" className='h-1/3 animate-pulse' />
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </main>
     )
 }
