@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Buenos Aires",
+        "country": "Argentina",
+        "image": "https://w0.peakpx.com/wallpaper/292/311/HD-wallpaper-obelisco-de-buenos-aires-monument-square-buenos-aires-plaza-de-la-republica-obelisk-of-buenos-aires-argentina-buenos-aires-cityscape-panorama.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Río de Janeiro",
+        "country": "Brazil",
+        "image": "https://w0.peakpx.com/wallpaper/828/62/HD-wallpaper-christ-the-redeemer-christ-brazil-rio-de-janeiro-rio.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Macchu Picchu",
+        "country": "Perú",
+        "image": "https://w0.peakpx.com/wallpaper/955/274/HD-wallpaper-foggy-macchu-picchu-forest-mountains-ruins-clouds-fog.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Punta Cana",
+        "country": "República Dominicana",
+        "image": "https://img.freepik.com/foto-gratis/playa-tropical_74190-188.jpg?w=900&t=st=1691177483~exp=1691178083~hmac=2be705f84bef5c8fa3ca2396611bc79752d34ceec1bd6dda8638101953301737"
+    },
+    {
+        "id": 5,
+        "name": "New York",
+        "country": "USA",
+        "image": "https://w0.peakpx.com/wallpaper/340/514/HD-wallpaper-pin-de-omar-rosales-en-kepek-nes-de-ciudades-nes-de-ciudades-new-york-city-rain.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Las Vegas",
+        "country": "USA",
+        "image": "https://w0.peakpx.com/wallpaper/889/969/HD-wallpaper-las-vegas-fountains-las-vegas-world-fountain.jpg"
+    },
+    {
+        "id": 7,
+        "name": "London",
+        "country": "England",
+        "image": "https://w0.peakpx.com/wallpaper/544/729/HD-wallpaper-microsoft-bing-london-theme-03.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Rome",
+        "country": "Italy",
+        "image": "https://w0.peakpx.com/wallpaper/216/179/HD-wallpaper-colosseum-rome-italy-rome-attractions-tourism.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Dubai",
+        "country": "Qatar",
+        "image": "https://w0.peakpx.com/wallpaper/943/350/HD-wallpaper-dubai-burj-al-arab-uae-burj-khalifa-night-skyscrapers-luxury-hotel-dubai-cityscape-dubai-skyline-united-arab-emirates.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Katmandú",
+        "country": "Nepal",
+        "image": "https://w0.peakpx.com/wallpaper/782/762/HD-wallpaper-buddha-eyes-swyambhunath-nepal-kathmandu-temple-gautam-buddha-temples-heritage-nepali-temples.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Pekín",
+        "country": "China",
+        "image": "https://w0.peakpx.com/wallpaper/60/823/HD-wallpaper-china-beijing-summer-palace-palaces.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Sidney",
+        "country": "Australia",
+        "image": "https://w0.peakpx.com/wallpaper/1016/778/HD-wallpaper-sydney-opera-house-sydney-opera-house-world-australia-sydney.jpg"
+    }
+]
