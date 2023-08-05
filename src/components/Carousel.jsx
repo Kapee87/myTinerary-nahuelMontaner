@@ -35,8 +35,8 @@ export default function Carousel() {
   }
   return (
     <>
-      <div className='h-16 bg-black w-full flex items-center justify-center'>
-        <h2 className='font-mono font-bold text-4xl drop-shadow-md shadow-lg'>
+      <div className='h-36 bg-black w-full flex items-center justify-center'>
+        <h2 className='font-mono font-bold text-4xl drop-shadow-ligthModeShadow text-center text-white '>
           Popular MyTineraries
         </h2>
       </div>

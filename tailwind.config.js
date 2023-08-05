@@ -22,6 +22,9 @@ export default {
           '60%': { backgroundPosition: '200%' },
           '100%': { backgroundPosition: '2500%' },
         }
+      },
+      dropShadow: {
+        'ligthModeShadow': '5px 10px 20px rgba(255,255,255,1)'
       }
     },
   },
