@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function CarouselPic({ countries, index }) {
     const i = [0, 1, 2, 3];
@@ -6,7 +7,7 @@ export default function CarouselPic({ countries, index }) {
         <>
             {
                 i.map((i) => (
-                    <div className='card object-cover overflow-hidden relative' key={i}>
+                    <Link className='card object-cover overflow-hidden relative' key={i}>
                         <div className=' max-h-60 rounded-lg overflow-hidden m-4'>
                             <img src={countries[index + i].image} alt="Burger" className='h-fit' />
                         </div>
@@ -18,8 +19,7 @@ export default function CarouselPic({ countries, index }) {
                                 {countries[index + i].country}
                             </h5>
                         </div>
-                    </div>
-
+                    </Link>
                 ))
 
             }

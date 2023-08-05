@@ -13,21 +13,14 @@ export default {
         'avionBg': "url('./avionBg.avif')"
       },
       animation: {
-        'slideBg': 'slideBg 30s infinite alternate ease-in-out'
+        'slideBg': 'slideBg 30s infinite  ease-in-out'
       },
       keyframes: {
         slideBg: {
           '0%': { backgroundPosition: '0%' },
-          '50%': { backgroundPosition: '2000%' },
-          '55%': { backgroundPosition: '4000%' },
-          '40%': { backgroundPosition: '6000%' },
-          '45%': { backgroundPosition: '8000%' },
-          '50%': { backgroundPosition: '10000%' },
-          '55%': { backgroundPosition: '12000%' },
-          '60%': { backgroundPosition: '14000%' },
-          '75%': { backgroundPosition: '18000%' },
-          '90%': { backgroundPosition: '20000%' },
-          '100%': { backgroundPosition: '25000%' },
+          '50%': { backgroundPosition: '100%' },
+          '60%': { backgroundPosition: '200%' },
+          '100%': { backgroundPosition: '2500%' },
         }
       }
     },
