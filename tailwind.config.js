@@ -24,7 +24,7 @@ export default {
         }
       },
       dropShadow: {
-        'ligthModeShadow': '5px 10px 20px rgba(255,255,255,1)'
+        'ligthModeShadow': '5px 5px 5px rgba(255,255,255,1)'
       }
     },
   },
