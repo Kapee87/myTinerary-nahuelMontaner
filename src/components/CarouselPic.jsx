@@ -9,7 +9,7 @@ export default function CarouselPic({ countries, index }) {
                 i.map((i) => (
                     <Link className='card object-cover overflow-hidden relative' key={i}>
                         <div className=' max-h-60 rounded-lg overflow-hidden m-4'>
-                            <img src={countries[index + i].image} alt="Burger" className='h-fit' />
+                            <img src={countries[index + i].image} alt="Burger" className='h-fit hover:scale-110 transition-transform duration-1000' />
                         </div>
                         <div className='absolute shadow-lg w-full h-16 bg-gray-950 bg-opacity-70 text-center bottom-0 font-serif font-bold rounded-lg'>
                             <h3 className='text-xl text-white'>
