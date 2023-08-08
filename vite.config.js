@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  homepage: 'https://kapee87.github.io/myTinerary-nahuelMontaner'
+  homepage: 'https://kapee87.github.io/myTinerary-nahuelMontaner/'
 })
