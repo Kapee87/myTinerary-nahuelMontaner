@@ -13,7 +13,8 @@ export default {
         'avionBg': "url('./avionBg.avif')"
       },
       animation: {
-        'slideBg': 'slideBg 30s infinite  ease-in-out'
+        'slideBg': 'slideBg 30s infinite  ease-in-out',
+        'wiggle': 'wiggle 7s infinite ease-in-out'
       },
       keyframes: {
         slideBg: {
@@ -21,6 +22,10 @@ export default {
           '50%': { backgroundPosition: '100%' },
           '60%': { backgroundPosition: '200%' },
           '100%': { backgroundPosition: '2500%' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(360deg)' },
         }
       },
       dropShadow: {

@@ -10,7 +10,7 @@ export default function Hero() {
                     <div className="flex items-center gap-5 justify-end">
                         <Link className='flex items-center hover:scale-125 transition-transform' to={'/cities'}>
                             <p className='text-2xl text-white'>Find your destination!</p>
-                            <img src="/myIco1.png" alt="animated button" className='h-16 ' />
+                            <img src="/myIco1.png" alt="animated button" className='h-16 animate-wiggle' />
                         </Link>
                     </div>
                 </div>
