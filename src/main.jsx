@@ -12,13 +12,14 @@ const router = createHashRouter([
   {
     path: '/',
     element: <Layout />,
+    errorElement: <PageNotFound />,
     children: [
       { path: '/', element: <Home /> },
       { path: '/cities', element: <Cities /> },
       { path: '/login', element: <Login /> },
-      { path: '*', element: <PageNotFound /> }
     ]
-  }
+  },
+  { path: '*', element: <PageNotFound /> }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
