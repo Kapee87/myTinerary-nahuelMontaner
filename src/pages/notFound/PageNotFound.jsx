@@ -1,5 +1,5 @@
 import React from 'react'
-import errorBg from '../../../public/404.jpg'
+import errorBg from '../../assets/404.jpg'
 
 export default function PageNotFound() {
 

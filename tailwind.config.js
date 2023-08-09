@@ -8,9 +8,9 @@ export default {
     extend: {
       backgroundImage: {
         'hero-background': "url('https://w0.peakpx.com/wallpaper/4/460/HD-wallpaper-summer-vacation-hotel-3d-concept-summer-travel-swimming-pool-vacation-tropical-island.jpg')",
-        'fondo1': "url('./heroBack.jpg')",
-        'construction': "url('./construction.jpg')",
-        'avionBg': "url('./avionBg.avif')"
+        'fondo1': "url('./assets/heroBack.jpg')",
+        'construction': "url('./assets/construction.jpg')",
+        'avionBg': "url('./assets/avionBg.avif')"
       },
       animation: {
         'slideBg': 'slideBg 30s infinite  ease-in-out',
