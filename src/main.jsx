@@ -7,6 +7,7 @@ import Home from './pages/index/Home.jsx'
 import Cities from './pages/cities/Cities.jsx'
 import Login from './pages/login/Login.jsx'
 import PageNotFound from './pages/notFound/PageNotFound.jsx'
+import Details from './pages/details/Details'
 
 const router = createHashRouter([
   {
@@ -16,6 +17,7 @@ const router = createHashRouter([
     children: [
       { path: '/', element: <Home /> },
       { path: '/cities', element: <Cities /> },
+      { path: '/cities/:id', element: <Details /> },
       { path: '/login', element: <Login /> },
     ]
   },

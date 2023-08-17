@@ -4,6 +4,7 @@ import Home from '../pages/index/Home'
 import Cities from '../pages/cities/Cities'
 import Login from '../pages/login/Login'
 import PageNotFound from '../pages/notFound/PageNotFound'
+import Details from '../pages/details/Details'
 
 const router = createBrowserRouter([
     {
@@ -11,7 +12,13 @@ const router = createBrowserRouter([
         element: <Layout />,
         children: [
             { path: '/', element: <Home /> },
-            { path: '/cities', element: <Cities /> },
+            {
+                path: '/cities',
+                element: <Cities />,
+                children: [
+                    { path: '/:id', element: <Details /> }
+                ]
+            },
             { path: '/login', element: <Login /> },
             { path: '*', element: <PageNotFound /> }
         ]
