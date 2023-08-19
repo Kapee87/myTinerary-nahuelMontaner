@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-background': "url('https://w0.peakpx.com/wallpaper/4/460/HD-wallpaper-summer-vacation-hotel-3d-concept-summer-travel-swimming-pool-vacation-tropical-island.jpg')",
+        // 'hero-background2': "url('https://img.freepik.com/foto-gratis/mujeres-turistas-mano-tienen-feliz-mapa-viaje_1150-7411.jpg?size=626&ext=jpg&ga=GA1.2.598219039.1690940802&semt=sphhttps://img.freepik.com/fotos-premium/equipaje-viaje-terminal-aeropuerto_34013-3.jpg?size=626&ext=jpg&ga=GA1.2.598219039.1690940802&semt=sph')",
+        'hero-background': "url('https://img.freepik.com/fotos-premium/equipaje-viaje-terminal-aeropuerto_34013-3.jpg?size=626&ext=jpg&ga=GA1.2.598219039.1690940802&semt=sph')",
+        // 'hero-background2': "url('https://img.freepik.com/foto-gratis/mapa-dejar-ferrocarril-al-aire-libre-actividad-libertad_1421-267.jpg?size=626&ext=jpg&ga=GA1.2.598219039.1690940802&semt=sph')",
+        'hero-background2': "url('https://img.freepik.com/fotos-premium/fondo-viaje-diferentes-sellos-pasaporte_484651-19111.jpg?size=626&ext=jpg&ga=GA1.2.598219039.1690940802&semt=ais')",
         'fondo1': "url('./assets/heroBack.jpg')",
         'construction': "url('./assets/construction.jpg')",
         'avionBg': "url('./assets/avionBg.avif')"
