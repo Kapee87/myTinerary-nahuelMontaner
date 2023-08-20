@@ -9,11 +9,15 @@ import lupita from '../../assets/lupita.png'
 export default function Cities() {
     const [cities, setCities] = useState()
     useEffect(() => {
-        axios.get('https://mytinerary-api.onrender.com/api/cities')
-            .then(res => {
-                setCities(res.data.cities)
-            })
-            .catch(err => console.log(err))
+        try {
+            axios.get('https://mytinerary-api.onrender.com/api/cities')
+                .then(res => {
+                    setCities(res.data.cities)
+                })
+                .catch(err => console.log(err))
+        } catch (error) {
+            console.log(error);
+        }
     }, [])
 
     const handleChange = async (e) => {

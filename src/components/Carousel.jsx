@@ -6,6 +6,7 @@ export default function Carousel() {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
+
     const timer = setInterval(() => {
       if (index < 8) {
         setIndex(index + 4)
