@@ -22,7 +22,7 @@ export default function Cities() {
 
     const handleChange = async (e) => {
         try {
-            await axios.get(`https://mytinerary-api.onrender.com/api/cities?city=${e.target.value}`)
+            await axios.get(`https://mytinerary-api.onrender.com/api/cities?city=${e.target.value}&country=${e.target.value}`)
                 .then(res => setCities(res.data.cities))
         } catch (error) {
             console.log(error);
@@ -43,7 +43,7 @@ export default function Cities() {
                     </button>
                 </form>
             </div>
-            <div className='flex flex-wrap gap-5 justify-center'>
+            <div className='flex flex-wrap gap-5 justify-center bg-blue-600'>
                 {
                     cities?.length > 0
                         ? cities?.map((city) => (
@@ -51,8 +51,8 @@ export default function Cities() {
                         )
                         )
                         :
-                        <p className='card w-3/5 h-80 text-emerald-600'>
-                            Not found
+                        <p className='card w-3/5 h-80 text-3xl text-emerald-600 font-bold backdrop-brightness-50 justify-center items-center'>
+                            City Not found
                         </p>
                 }
             </div>
