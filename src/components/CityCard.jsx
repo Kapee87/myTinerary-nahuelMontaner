@@ -15,7 +15,7 @@ function CityCard({ cityArray }) {
         <Link
             to={`/cities/${_id}`}
             before={detail.slice(0, 105) + '...'}
-            className={`card w-[60vw] max-w-[17rem] glass h-min-16 after:rounded-2xl hover:after:content-[attr(before)] after:text-sm after:h-full after:w-full after:text-slate-200 after:font-serif after:absolute after:transition-all after:flex after:justify-center after:items-center after:p-4 hover:after:backdrop-blur-sm duration-1000 group`}  >
+            className={`card w-[60vw] max-w-[17rem] glass max-h-52 h-min-16 after:rounded-2xl hover:after:content-[attr(before)] after:text-sm after:h-full after:w-full after:text-slate-200 after:font-serif after:absolute after:transition-all after:flex after:justify-center after:items-center after:p-4 hover:after:backdrop-blur-sm duration-1000 group`}  >
             <figure className='w-full h-full overflow-hidden'><img src={image} alt={detail} className='w-full h-full group-hover:scale-125 transition-all duration-1000' loading='lazy' /></figure>
             <div className='bg-slate-600 rounded-b-lg text-center p-3 flex justify-between items-center z-50 px-5'>
                 <h3 className="text-sm stat-value">{city}</h3>

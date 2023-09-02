@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react'
-
 import { useParams } from 'react-router'
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Itineraries from '../../components/Itineraries';
+import { useDispatch, useSelector } from 'react-redux';
+import cityActions from '../../redux/actions/cityActions';
 
 function DetailsPage() {
     const { id } = useParams()
-    const [detail, setDetail] = useState()
+    // const [detail, setDetail] = useState()
+
+    const detail = useSelector((store) => store.cityReducer.city)
+    const dispatch = useDispatch()
     const [isLoading, setIsloading] = useState(true)
     const [scrollDown, setScrollDown] = useState(false)
 
+
     useEffect(() => {
         setIsloading(true)
-        axios.get(`https://mytinerary-api.onrender.com/api/cities/${id}`)
-            .then((res) => { setDetail(res.data.cities) })
-            .then(() => {
-                setIsloading(false)
-            })
+        dispatch(cityActions.get_city_by_id({ id: id }))
+        setIsloading(false)
         scroll(0, 0)
     }, [])
 
@@ -90,7 +91,7 @@ function DetailsPage() {
             }
             {
                 scrollDown
-                    ? <div className={`animate-bounce fixed md:bottom-5 md:right-[46vw] bottom-4 right-1 z-50 ${!scrollDown ? '' : '[&>svg]:rotate-180'}`} onClick={handleArrowClick}>
+                    ? <div className={`animate-bounce fixed md:bottom-1 md:right-[46vw] bottom-3 right-1 z-50 ${!scrollDown ? '' : '[&>svg]:rotate-180'}`} onClick={handleArrowClick}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -116,8 +117,13 @@ function DetailsPage() {
                     </div>
                     : ''
             }
+            {
+                !detail ? ''
+                    : detail?.itineraries?.map((it, index) => (
+                        <Itineraries key={it} itinerary={it} index={index} />
+                    ))
+            }
 
-            <Itineraries detail={detail} />
             {/* <UnderConstruction /> */}
         </>
     )
