@@ -20,6 +20,7 @@ function DetailsPage() {
         dispatch(cityActions.get_city_by_id({ id: id }))
         setIsloading(false)
         scroll(0, 0)
+        console.log(detail.itineraries);
     }, [])
 
     const handleArrowClick = () => {
@@ -118,7 +119,14 @@ function DetailsPage() {
                     : ''
             }
             {
-                !detail ? ''
+                detail?.itineraries.length == 0
+                    ? <p className='flex justify-center items-center w-full min-h-screen bg-primary '>
+                        <span className='card py-10 px-3 bg-slate-800 drop-shadow-shadowDos text-center cursor-not-allowed'>
+                            Doesn't have any itineraries yet, would you create one? 😁
+                            <br />
+                            <b className='text-slate-600'>(coming soon function)</b>
+                        </span>
+                    </p>
                     : detail?.itineraries?.map((it, index) => (
                         <Itineraries key={it} itinerary={it} index={index} />
                     ))
