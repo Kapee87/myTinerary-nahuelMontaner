@@ -20,12 +20,13 @@ function Itineraries({ itinerary, index }) {
     }, [])
 
     const handleLike = () => {
-        const updateItinerary = {
-            ...itinerary,
-            likes: itinerary.likes + 1
-        }
-        dispatch(cityActions.update_itinerary(updateItinerary))
-
+        /*  const updateItinerary = {
+             ...itinerary,
+             likes: itinerary.likes + 1
+         }
+         dispatch(cityActions.update_itinerary(updateItinerary))
+         */
+        alert('coming soon function')
     }
     return (
         <section>

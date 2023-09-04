@@ -45,7 +45,7 @@ function DetailsPage() {
     return (
         <>
             <Link to='/cities' >
-                <button className="btn bg-slate-600 absolute right-5 text-[.85em] top-[12vh] md:top-[20vh] z-10">Volver a cities</button>
+                <button className="absolute right-5 text-4xl top-[12vh] md:top-[20vh] z-10 hue-rotate-180">↩️</button>
             </Link>
             {
                 isLoading
@@ -55,24 +55,6 @@ function DetailsPage() {
                     </section>
                     : (
                         detail ?
-                            // <section className='bg-hero-background2 w-full h-screen bg-fixed bg-cover flex justify-center items-center z-0'>
-                            //     <figure className='w-full h-full overflow-hidden hidden md:flex'>
-                            //         <img src={detail.image} alt={detail.detail} className='w-full h-full object-cover objec transition-all duration-1000' loading='lazy' />
-                            //     </figure>
-                            //     <div className={`card md:card-side w-[80vw] max-w-[37rem] h-screen h-min-16 duration-1000`}>
-
-                            //             <img src={detail.image} alt={detail.detail} className='w-full h-full object-cover objec transition-all duration-1000 md:hidden' loading='lazy' />
-
-                            //         <div className='backdrop-blur-sm rounded-b-lg text-center p-3 flex flex-col items-center justify-center px-5 h-full'>
-                            //             <div className='flex items-center justify-around w-full'>
-                            //                 <h3 className="text-sm lg:text-lg stat-value text-gray-800">{detail.city}</h3>
-                            //                 <p className='text-xs stat-title text-gray-700'>{detail.country}</p>
-                            //             </div>
-                            //             <p className='text-xs text-gray-800'>{detail.detail} </p>
-                            //             {/* <p className={`absolute top-0 left-0 p-5 text-gray-100 backdrop-blur-2xl rounded-2xl h-full w-full font-serif ${isHover ? 'flex' : 'hidden'}`}>{detail}</p> */}
-                            //         </div>
-                            //     </div >
-                            // </section>
                             <div className="hero min-h-screen" style={{ backgroundImage: `url(${detail.image})` }}>
                                 <div className="hero-overlay bg-opacity-60"></div>
                                 <div className="hero-content text-center text-neutral-content">
@@ -119,7 +101,7 @@ function DetailsPage() {
                     : ''
             }
             {
-                detail?.itineraries.length == 0
+                detail?.itineraries?.length == 0
                     ? <p className='flex justify-center items-center w-full min-h-screen bg-primary '>
                         <span className='card py-10 px-3 bg-slate-800 drop-shadow-shadowDos text-center cursor-not-allowed'>
                             Doesn't have any itineraries yet, would you create one? 😁

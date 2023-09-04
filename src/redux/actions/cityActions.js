@@ -31,10 +31,10 @@ const filter_cities = createAsyncThunk('filter_cities', async (obj) => {
 })
 
 const get_city_by_id = createAsyncThunk('get_city_by_id', async (obj) => {
-    // console.log(obj);
+    console.log(obj);
     try {
         const response = await axios.get(`https://mytinerary-api.onrender.com/api/cities/${obj.id}`)
-        // console.log(response.data);
+        console.log(response.data);
         return {
             city: response.data.Cities
         }
@@ -48,6 +48,7 @@ const get_city_by_id = createAsyncThunk('get_city_by_id', async (obj) => {
 })
 
 const update_itinerary = createAsyncThunk('update_itinerary', async (obj) => {
+    // console.log(obj);
     try {
         const response = await axios.put(`https://mytinerary-api.onrender.com/api/itineraries/${obj._id}`, {
             likes: obj.likes
