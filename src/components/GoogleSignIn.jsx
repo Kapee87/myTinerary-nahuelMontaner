@@ -24,7 +24,7 @@ function GoogleSignIn() {
 
     useEffect(() => {
 
-        window.onload = () => {
+        if (window.google) {
             window.google.accounts.id.initialize({
                 client_id: "617300972916-luso4e9ellh77op5d6kdvckh0mebjct0.apps.googleusercontent.com",
                 callback: handleCredentialResponse

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import userActions from '../redux/actions/userActions'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import GoogleSignIn from './googleSignIn'
 
 function SignUp({ setIsNew }) {
     const [countries, setCountries] = useState([])
@@ -104,6 +105,7 @@ function SignUp({ setIsNew }) {
                         className="w-full mt-6 py-2 rounded bg-purple-500 text-gray-100 focus:outline-none">
                         Sign up
                     </button>
+                    <GoogleSignIn />
                     <button
                         type='button'
                         className='card w-full mt-5 p-3 text-white bg-gradient-to-r from-sky-500 to-indigo-500 flex text-end'
