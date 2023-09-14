@@ -6,7 +6,6 @@ const get_itineraries = createAsyncThunk('get_itineraries',
     async () => {
         try {
             const response = await axios.get('https://mytinerary-api.onrender.com/api/itineraries')
-            // console.log(response.data.cities);
             return {
                 itineraries: response.data.itineraries
             }
@@ -19,7 +18,6 @@ const get_itinerary_by_id = createAsyncThunk('get_itinerary_by_id',
     async (obj) => {
         try {
             const response = await axios.get(`https://mytinerary-api.onrender.com/api/itineraries/${obj._id}`)
-            console.log(response.data);
             return {
                 itinerary: response.data.itineraries
             }

@@ -1,23 +1,41 @@
 import { createReducer } from '@reduxjs/toolkit'
 import userActions from '../actions/userActions'
-import { genericAvatar } from '../../assets/genericAvatar'
 
-const { user_photo, get_user } = userActions
+const { resetUser, user_login, user_login_google, user_token, user_signup } = userActions
 
 const initialState = {
-    photo: genericAvatar,
-    user: {}
+    user: null,
+    token: null,
+    error: null
 }
 
 const userReducer = createReducer(initialState,
     (builder) => builder
-        .addCase(user_photo, (state, action) => {
+        .addCase(user_signup.fulfilled, (state, action) => {
             return {
                 ...state,
-                photo: action.payload.photo
+                user: action.payload
             }
         })
-        .addCase(get_user.fulfilled, (state, action) => {
+        .addCase(user_login.fulfilled, (state, action) => {
+            return {
+                ...state,
+                user: action.payload.user,
+                token: action.payload.token
+            }
+        })
+        .addCase(user_login_google.fulfilled, (state, action) => {
+            return {
+                ...state,
+                user: action.payload.user,
+                token: action.payload.token
+            }
+        })
+        .addCase(resetUser.fulfilled, (state, action) => { //esto sería el sign out
+            return { ...initialState };
+        })
+        .addCase(user_token.fulfilled, (state, action) => {
+            if (!action.payload.user) { return }
             return {
                 ...state,
                 user: action.payload.user

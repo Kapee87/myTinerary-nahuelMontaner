@@ -3,13 +3,13 @@ import dolarin from '../assets/mileidolar.png'
 import img3 from '../assets/construction.jpg'
 import { genericAvatar } from '../assets/genericAvatar';
 import { useDispatch, useSelector } from 'react-redux';
-import cityActions from '../redux/actions/cityActions';
+// import cityActions from '../redux/actions/cityActions';
 
 function Itineraries({ itinerary, index }) {
     const dispatch = useDispatch()
 
     const [billetes, setBilletes] = useState([])
-    console.log(itinerary);
+
 
     useEffect(() => {
         //calculador de rango para renderizar los billetes

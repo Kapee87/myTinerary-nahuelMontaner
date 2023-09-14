@@ -20,7 +20,6 @@ function DetailsPage() {
         dispatch(cityActions.get_city_by_id({ id: id }))
         setIsloading(false)
         scroll(0, 0)
-        console.log(detail.itineraries);
     }, [])
 
     const handleArrowClick = () => {
@@ -110,7 +109,7 @@ function DetailsPage() {
                         </span>
                     </p>
                     : detail?.itineraries?.map((it, index) => (
-                        <Itineraries key={it} itinerary={it} index={index} />
+                        <Itineraries key={it._id} itinerary={it} index={index} />
                     ))
             }
 
