@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import userActions from '../redux/actions/userActions';
 import Swal from 'sweetalert2';
-import GoogleSignIn from './googleSignIn';
+import GoogleSignIn from './googleSignIn.jsx';
 
 
 export default function LoginForm({ setIsNew }) {
@@ -58,7 +58,7 @@ export default function LoginForm({ setIsNew }) {
                     store.user
                         ?
                         //lo dejo por si llega a fallar el efecto con el navigate al logearse
-                        <form action="" className="w-full m-3 md:w-1/3 bg-white rounded-lg items-center mt-5" onSubmit={handleSignIn}>
+                        <form action="" className="w-full m-3 md:w-1/3 bg-white rounded-lg items-center mt-5 min-w-fit" onSubmit={handleSignIn}>
                             <div className="flex font-bold justify-center mt-6 items-center gap-3">
                                 <img src={store?.user.image} alt="" className="h-24 w-24 rounded-full" />
                                 <h3>{store.user.email} </h3>
@@ -93,7 +93,9 @@ export default function LoginForm({ setIsNew }) {
                                     className="w-full mt-6 py-2 rounded bg-purple-500 text-gray-100 focus:outline-none">
                                     Sign in
                                 </button>
-                                <GoogleSignIn />
+                                <div>
+                                    <GoogleSignIn />
+                                </div>
 
                                 <button
                                     type='button'

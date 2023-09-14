@@ -4,9 +4,9 @@ import { useDispatch } from 'react-redux'
 import userActions from '../redux/actions/userActions'
 
 function GoogleSignIn() {
-    const googleBtnXl = useRef()
-    const googleBtnMd = useRef()
-    const googleBtnXs = useRef()
+    const googleBtn = useRef()
+
+
     const dispatch = useDispatch()
     const { user_login_google } = userActions
 
@@ -21,45 +21,33 @@ function GoogleSignIn() {
         dispatch(user_login_google(userResponse.data.response))
     }
 
+
     useEffect(() => {
-        window.onload = function () {
+
+        window.onload = () => {
             window.google.accounts.id.initialize({
                 client_id: "617300972916-luso4e9ellh77op5d6kdvckh0mebjct0.apps.googleusercontent.com",
                 callback: handleCredentialResponse
             });
             window.google.accounts.id.renderButton(
-                googleBtnXl.current,
+                googleBtn.current,
                 {
-                    theme: "filled_black",
-                    size: "large",
                     type: "standard",
-                    shape: "pill"
-                },
-                googleBtnMd.current,
-                {
-                    theme: "filled_black",
+                    shape: "rectangular",
+                    theme: "filled_blue",
                     size: "medium",
-                    type: "standard",
-                    shape: "pill"
-                },
-                googleBtnXs.current,
-                {
-                    theme: "filled_black",
-                    size: "small",
-                    type: "standard",
-                    shape: "pill"
                 }
-
             );
+
         }
     }, [])
 
     return (
-        <div className='m-5 flex flex-col'>
-            <div className='m-3 hidden lg:flex' ref={googleBtnXl}></div>
-            <div className='m-3 hidden md:flex lg:hidden ' ref={googleBtnMd}></div>
-            <div className='m-3 md:hidden' ref={googleBtnXs}></div>
-        </div>
+        <>
+            <div className='m-3' ref={googleBtn}></div>
+
+        </>
+
     )
 }
 
