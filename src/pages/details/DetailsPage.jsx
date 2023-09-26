@@ -109,7 +109,7 @@ function DetailsPage() {
                         </span>
                     </p>
                     : detail?.itineraries?.map((it, index) => (
-                        <Itineraries key={it._id} itinerary={it} index={index} />
+                        <Itineraries key={it._id} itinerary={null} index={index} />
                     ))
             }
 

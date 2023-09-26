@@ -2,21 +2,24 @@ import React, { useEffect, useState } from 'react'
 import dolarin from '../assets/mileidolar.png'
 import img3 from '../assets/construction.jpg'
 import { genericAvatar } from '../assets/genericAvatar';
-import { useDispatch, useSelector } from 'react-redux';
-// import cityActions from '../redux/actions/cityActions';
+import { useDispatch } from 'react-redux';
 
-function Itineraries({ itinerary, index }) {
+
+
+function Itineraries({ itinerary }) {
     const dispatch = useDispatch()
-
     const [billetes, setBilletes] = useState([])
-
 
     useEffect(() => {
         //calculador de rango para renderizar los billetes
         let price = itinerary.price;
         let numBilletes
-        price < 100 ? numBilletes = 1 : price > 100 & price < 400 ? numBilletes = 2 : price > 400 & price < 800 ? numBilletes = 3 : price > 800 & price < 1200 ? numBilletes = 4 : numBilletes = 5
+        price < 100 ? numBilletes = 1 : price > 100 &
+            price < 400 ? numBilletes = 2 : price > 400 &
+                price < 800 ? numBilletes = 3 : price > 800 &
+                    price < 1200 ? numBilletes = 4 : numBilletes = 5
         setBilletes(Array(numBilletes).fill(dolarin));
+
     }, [])
 
     const handleLike = () => {
@@ -26,6 +29,7 @@ function Itineraries({ itinerary, index }) {
          }
          dispatch(cityActions.update_itinerary(updateItinerary))
          */
+
         alert('coming soon function')
     }
     return (

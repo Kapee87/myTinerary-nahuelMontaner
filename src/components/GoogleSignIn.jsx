@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import userActions from '../redux/actions/userActions'
+import apiUrl from '../api.js'
 
 function GoogleSignIn() {
     const googleBtn = useRef()
@@ -16,7 +17,7 @@ function GoogleSignIn() {
             token_id: response.credential
         }
         // const userResponse = await axios.post('http://localhost:8000/api/auth/google', data)
-        const userResponse = await axios.post('https://mytinerary-api.onrender.com/api/auth/google', data)
+        const userResponse = await axios.post(`${apiUrl}auth/google`, data)
 
         dispatch(user_login_google(userResponse.data.response))
     }
@@ -27,6 +28,7 @@ function GoogleSignIn() {
         if (window.google) {
             window.google.accounts.id.initialize({
                 client_id: "617300972916-luso4e9ellh77op5d6kdvckh0mebjct0.apps.googleusercontent.com",
+                //import.meta.env.VITE_CLIENT_ID
                 callback: handleCredentialResponse
             });
             window.google.accounts.id.renderButton(
