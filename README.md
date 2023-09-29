@@ -24,7 +24,7 @@ Descripción concisa del proyecto.
 
 ## Demostración en Vivo
 
-Puedes ver una demostración en vivo del proyecto [aquí](URL_DEMO).
+Puedes ver una demostración en vivo del proyecto [aquí]().
 
 ## Instrucciones de Uso
 
@@ -41,8 +41,11 @@ Si no deseas crear una cuenta, puedes usar las siguientes credenciales de usuari
 
 ## Capturas de Pantalla
 
-![Captura de Pantalla 1](/screenshots/screenshot1.png)
-![Captura de Pantalla 2](/screenshots/screenshot2.png)
+![Screenshot 2023-09-29 161018](https://github.com/Kapee87/myTinerary-nahuelMontaner/assets/89433307/29521aaa-8fd4-496a-a4b5-d2c664211581)
+![Screenshot 2023-09-29 161050](https://github.com/Kapee87/myTinerary-nahuelMontaner/assets/89433307/af6849ff-b1f5-46a6-ad11-f0bfbf01f161)
+![Screenshot 2023-09-29 161109](https://github.com/Kapee87/myTinerary-nahuelMontaner/assets/89433307/b13466a2-e04f-43ce-9b1e-dcd795ff65cf)
+![Screenshot 2023-09-29 161137](https://github.com/Kapee87/myTinerary-nahuelMontaner/assets/89433307/026cd981-3287-46e4-b0df-3ee4cf94113a)
+
 
 ## Contribuir
 
@@ -55,4 +58,4 @@ Si deseas contribuir a este proyecto, por favor sigue estas pautas:
 
 ## Licencia
 
-Este proyecto está bajo la Licencia [Nombre de la Licencia]. Consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
+Este proyecto está bajo la Licencia [MIT]
